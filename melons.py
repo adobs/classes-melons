@@ -1,12 +1,5 @@
 """melons.py -- This file should have our melon-type classes in it."""
-
-
-class WatermelonOrder(object):
-    species = "Watermelon"
-    color = "green"
-    imported = False
-    shape = 'natural'
-    seasons = ['Fall', 'Summer']
+class MelonOrder(object):
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
@@ -30,6 +23,16 @@ class WatermelonOrder(object):
         total = qty * price
 
         return total
+
+
+class WatermelonOrder(MelonOrder):
+    species = "Watermelon"
+    color = "green"
+    imported = False
+    shape = 'natural'
+    seasons = ['Fall', 'Summer']
+
+
 
 
 class CantaloupeOrder(object):
@@ -39,29 +42,7 @@ class CantaloupeOrder(object):
     shape = 'natural'
     seasons = ['Spring', 'Summer']
 
-    def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
-        price = 5
-
-        if self.species == "Casaba" or self.species == "Ogen":
-            price = price + 1
-        
-        if self.imported == True:
-            price = price * 1.5
-        
-        if self.shape == 'square':
-            price = 2 * price
-        
-        if self.species == "Watermelon" and qty > 2:
-            price = 0.75 * price
-
-        if self.species == "Cantaloupe" and qty > 4:
-            price = 0.5 * price    
-
-        total = qty * price
-
-        return total
-
+   
 class CasabaOrder(object):
     species = "Casaba"
     color = "green"
@@ -69,28 +50,6 @@ class CasabaOrder(object):
     shape = 'natural'
     seasons = ['Spring', 'Summer',"Fall","Winter"]
 
-    def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
-        price = 5
-
-        if self.species == "Casaba" or self.species == "Ogen":
-            price = price + 1
-        
-        if self.imported == True:
-            price = price * 1.5
-        
-        if self.shape == 'square':
-            price = 2 * price
-        
-        if self.species == "Watermelon" and qty > 2:
-            price = 0.75 * price
-
-        if self.species == "Cantaloupe" and qty > 4:
-            price = 0.5 * price    
-
-        total = qty * price
-
-        return total
 
 class SharlynOrder(object):
     species = "Sharlyn"
@@ -98,29 +57,6 @@ class SharlynOrder(object):
     imported = True
     shape = 'natural'
     seasons = ['Summer']
-
-    def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
-        price = 5
-
-        if self.species == "Casaba" or self.species == "Ogen":
-            price = price + 1
-        
-        if self.imported == True:
-            price = price * 1.5
-        
-        if self.shape == 'square':
-            price = 2 * price
-        
-        if self.species == "Watermelon" and qty > 2:
-            price = 0.75 * price
-
-        if self.species == "Cantaloupe" and qty > 4:
-            price = 0.5 * price    
-
-        total = qty * price
-
-        return total
 
 
 class SantaClausOrder(object):
@@ -130,29 +66,6 @@ class SantaClausOrder(object):
     shape = 'natural'
     seasons = ['Winter','Spring']
 
-    def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
-        price = 5
-
-        if self.species == "Casaba" or self.species == "Ogen":
-            price = price + 1
-        
-        if self.imported == True:
-            price = price * 1.5
-        
-        if self.shape == 'square':
-            price = 2 * price
-        
-        if self.species == "Watermelon" and qty > 2:
-            price = 0.75 * price
-
-        if self.species == "Cantaloupe" and qty > 4:
-            price = 0.5 * price    
-
-        total = qty * price
-
-        return total
-
 
 class ChristmasOrder(object):
     species = "Christmas"
@@ -160,29 +73,6 @@ class ChristmasOrder(object):
     imported = False
     shape = 'natural'
     seasons = ['Winter']
-
-    def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
-        price = 5
-
-        if self.species == "Casaba" or self.species == "Ogen":
-            price = price + 1
-        
-        if self.imported == True:
-            price = price * 1.5
-        
-        if self.shape == 'square':
-            price = 2 * price
-        
-        if self.species == "Watermelon" and qty > 2:
-            price = 0.75 * price
-
-        if self.species == "Cantaloupe" and qty > 4:
-            price = 0.5 * price    
-
-        total = qty * price
-
-        return total
 
 
 class HornedMelonOrder(object):
@@ -192,29 +82,6 @@ class HornedMelonOrder(object):
     shape = 'natural'
     seasons = ['Summer']
 
-    def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
-        price = 5
-
-        if self.species == "Casaba" or self.species == "Ogen":
-            price = price + 1
-        
-        if self.imported == True:
-            price = price * 1.5
-        
-        if self.shape == 'square':
-            price = 2 * price
-        
-        if self.species == "Watermelon" and qty > 2:
-            price = 0.75 * price
-
-        if self.species == "Cantaloupe" and qty > 4:
-            price = 0.5 * price    
-
-        total = qty * price
-
-        return total
-
 
 class XiguaOrder(object):
     species = "Xigua"
@@ -223,29 +90,6 @@ class XiguaOrder(object):
     shape = 'square'
     seasons = ['Summer']
 
-    def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
-        price = 5
-
-        if self.species == "Casaba" or self.species == "Ogen":
-            price = price + 1
-        
-        if self.imported == True:
-            price = price * 1.5
-        
-        if self.shape == 'square':
-            price = 2 * price
-        
-        if self.species == "Watermelon" and qty > 2:
-            price = 0.75 * price
-
-        if self.species == "Cantaloupe" and qty > 4:
-            price = 0.5 * price    
-
-        total = qty * price
-
-        return total
-        
 
 class OgenOrder(object):
     species = "Ogen"
@@ -254,25 +98,3 @@ class OgenOrder(object):
     shape = 'natural'
     seasons = ['Summer',"Spring"]
 
-    def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
-        price = 5
-
-        if self.species == "Casaba" or self.species == "Ogen":
-            price = price + 1
-        
-        if self.imported == True:
-            price = price * 1.5
-        
-        if self.shape == 'square':
-            price = 2 * price
-        
-        if self.species == "Watermelon" and qty > 2:
-            price = 0.75 * price
-
-        if self.species == "Cantaloupe" and qty > 4:
-            price = 0.5 * price    
-
-        total = qty * price
-
-        return total
